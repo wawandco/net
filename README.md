@@ -2,6 +2,7 @@
 This package extends "golang.org/x/net" with line number metadata incrusted in every node and token.
 
 ## tokenize
+```
 z := html.NewTokenizer(r)
 
 for {
@@ -14,7 +15,7 @@ for {
   tok := z.Token()
   fmt.Println(tok.LineNumber) // => Line where the token was defined in document.
 }
-
+```
 
 ## parse
 ```
