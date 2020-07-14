@@ -1,5 +1,5 @@
 # net
-This package extends [golang.org/x/net](https://godoc.org/golang.org/x/net/html) with line number metadata incrusted in every node and token.
+This package extends [golang.org/x/net](https://godoc.org/golang.org/x/net/html) with line number metadata attached to every node and token.
 
 ## tokenize
 ```
@@ -12,7 +12,7 @@ for {
    }
   
    tok := z.Token()
-   fmt.Println(tok.LineNumber) // => Line where the token was defined in document.
+   fmt.Println(tok.Line) // => Line where the token was defined in document.
 }
 ```
 
@@ -26,7 +26,7 @@ if err != nil {
 var f func(*html.Node)
 f = func(n *html.Node) {
 
-   fmt.Println(n.Data, n.LineNumber) // => Line where the node was defined in document.
+   fmt.Println(n.Data, n.Line) // => Line where the node was defined in document.
   
    for c := n.FirstChild; c != nil; c = c.NextSibling {
       f(c)
