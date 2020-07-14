@@ -1,7 +1,7 @@
 # net
-This package extends [golang.org/x/net](https://godoc.org/golang.org/x/net/html) with line number metadata attached to every node and token.
+This package extends [golang.org/x/net](https://godoc.org/golang.org/x/net/html) with line number metadata attached to every node and token inside `html' package.
 
-## tokenize
+## Tokenize
 ```
 z := html.NewTokenizer(r)
 
@@ -16,7 +16,7 @@ for {
 }
 ```
 
-## parse
+## Parse
 ```
 doc, err := html.Parse(r)
 if err != nil {
@@ -34,3 +34,7 @@ f = func(n *html.Node) {
 }
 f(doc)
 ```
+
+## Use
+Add this line to your go.mod definition file.    
+`replace golang.org/x/net => github.com/larrymjordan/net v0.0.0-20200714194128-a771946c73f6` 
