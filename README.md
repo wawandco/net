@@ -34,3 +34,16 @@ f = func(n *html.Node) {
 }
 f(doc)
 ```
+
+## quote for attributes
+```
+z := html.NewTokenizer(r)
+
+for {
+   ...
+   tok := z.Token()
+   for _, attr := range token.Attr {
+		fmt.Println("quote", attr.Quote) // => ' or "
+	}
+}
+```
