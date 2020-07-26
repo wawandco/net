@@ -35,7 +35,7 @@ f = func(n *html.Node) {
 f(doc)
 ```
 
-## quote for attributes
+## Quote for attributes
 ```
 z := html.NewTokenizer(r)
 
@@ -49,4 +49,4 @@ for {
 ```
 ## Use
 Add this line to your go.mod definition file.    
-`replace golang.org/x/net => github.com/larrymjordan/net v0.0.0-20200714194128-a771946c73f6` 
+`replace golang.org/x/net => github.com/larrymjordan/net v0.0.0-20200725184815-638d2fe3e26e` 
