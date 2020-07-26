@@ -35,6 +35,18 @@ f = func(n *html.Node) {
 f(doc)
 ```
 
+## Quote for attributes
+```
+z := html.NewTokenizer(r)
+
+for {
+   ...
+   tok := z.Token()
+   for _, attr := range token.Attr {
+		fmt.Println("quote", attr.Quote) // => ' or "
+	}
+}
+```
 ## Use
 Add this line to your go.mod definition file.    
-`replace golang.org/x/net => github.com/larrymjordan/net v0.0.0-20200714194128-a771946c73f6` 
+`replace golang.org/x/net => github.com/larrymjordan/net v0.0.0-20200725184815-638d2fe3e26e` 
