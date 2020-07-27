@@ -1210,7 +1210,11 @@ func (z *Tokenizer) Token() Token {
 			var key, val []byte
 			var quote byte
 			key, val, quote, moreAttr = z.TagAttr()
-			t.Attr = append(t.Attr, Attribute{"", atom.String(key), string(val), string(quote)})
+			attr := Attribute{"", atom.String(key), string(val), string(quote)}
+			if attr.Quote == string(0) {
+				attr.Quote = ""
+			}
+			t.Attr = append(t.Attr, attr)
 		}
 		if a := atom.Lookup(name); a != 0 {
 			t.DataAtom, t.Data = a, a.String()

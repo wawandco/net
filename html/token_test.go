@@ -734,7 +734,7 @@ func benchmarkTokenizer(b *testing.B, level int) {
 				case StartTagToken, SelfClosingTagToken:
 					_, more := z.TagName()
 					for more {
-						_, _, more = z.TagAttr()
+						_, _, _, more = z.TagAttr()
 					}
 				case EndTagToken:
 					z.TagName()

@@ -49,4 +49,4 @@ for {
 ```
 ## Use
 Add this line to your go.mod definition file.    
-`replace golang.org/x/net => github.com/larrymjordan/net v0.0.0-20200725184815-638d2fe3e26e` 
+`replace golang.org/x/net => github.com/larrymjordan/net v0.0.0-20200727142315-6522ad897463` 
