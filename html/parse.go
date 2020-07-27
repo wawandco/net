@@ -2302,9 +2302,6 @@ func (p *parser) parse() error {
 		n := p.oe.top()
 		p.tokenizer.AllowCDATA(n != nil && n.Namespace != "")
 		// Read and parse the next token.
-		if p.tok.Data == "script" || p.tok.Data == "title" {
-			p.tokenizer.NextIsNotRawText()
-		}
 		p.tokenizer.Next()
 		p.tok = p.tokenizer.Token()
 		if p.tok.Type == ErrorToken {
